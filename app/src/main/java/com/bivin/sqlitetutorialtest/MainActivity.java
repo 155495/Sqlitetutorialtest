@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         final Button btn=findViewById(R.id.button);
         Button add=findViewById(R.id.btnsubmit);
 
-
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         name=(EditText) findViewById(R.id.name);
         phonenum=(EditText) findViewById(R.id.phone);
         final String[] n = new String[1];
