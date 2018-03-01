@@ -30,7 +30,7 @@ public class ListAdapter extends ArrayAdapter<Contact> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.listdetails, parent, false);
 
             TextView textViewTitle = (TextView) convertView.findViewById(R.id.id);
-            TextView textViewDate = (TextView) convertView.findViewById(R.id.name);
+            TextView textViewDate = (TextView) convertView.findViewById(R.id.namelist);
             TextView textViewLocation = (TextView) convertView.findViewById(R.id.phonenum);
 
             textViewTitle.setText(""+cont.getId());
