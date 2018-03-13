@@ -10,15 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-         android:windowSoftInputMode="adjustPan|adjustResize"
-            android:name=".MainActivity">
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize|stateVisible">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListAllDetailsActivity"></activity>
+        <activity android:name=".ListAllDetailsActivity" />
+        <activity android:name=".DisplayOneActivity"></activity>
     </application>
 
 </manifest>
