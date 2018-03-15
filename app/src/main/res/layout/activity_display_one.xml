@@ -4,27 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bivin.sqlitetutorialtest.DisplayOneActivity">
+    tools:context="com.bivin.sqlitetutorialtest.DisplayOneActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/txtdisplayAll"
         android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_marginTop="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="49dp"
         android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btnprevious"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnlast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="43dp"
+        android:text="@string/btnlast"
+        app:layout_constraintEnd_toStartOf="@+id/btnnext"
+        app:layout_constraintTop_toBottomOf="@+id/btnprevious"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:id="@+id/btnnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:text="@string/btnnext"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnlast"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="35dp" />
+
+    <Button
+        android:id="@+id/btnprevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="188dp"
+        android:text="@string/btnprevious"
+        app:layout_constraintStart_toEndOf="@+id/btnfirst"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="17dp" />
 
     <Button
         android:id="@+id/btnfirst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
-        android:text="<<"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtdisplayAll" />
+        android:text="@string/btnfirst"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnprevious"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Button btn=findViewById(R.id.button);
         Button add=findViewById(R.id.btnsubmit);
+        Button btnviewSingle=findViewById(R.id.btnviewSingle);
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         name=(EditText) findViewById(R.id.name);
@@ -78,5 +79,12 @@ public class MainActivity extends AppCompatActivity {
         }
 */
 
+       btnviewSingle.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intent=new Intent(getApplicationContext(),DisplayOneActivity.class);
+               startActivity(intent);
+           }
+       });
     }
 }

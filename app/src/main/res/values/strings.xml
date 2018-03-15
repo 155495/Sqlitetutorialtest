@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Sqlite tutorial test</string>
+    <string name="btnlast"> last </string>
+    <string name="btnnext"> next </string>
+    <string name="btnfirst"> first </string>
+    <string name="btnprevious"> previous </string>
 </resources>

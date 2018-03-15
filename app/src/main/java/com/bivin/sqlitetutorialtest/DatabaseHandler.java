@@ -80,4 +80,33 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return contactList;
     }
 
+
+    public String getSingleValues(int id) {
+
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        String name = null;
+        if (id == 1) {
+            cursor.moveToFirst();
+            if (cursor != null ) {
+                cursor.moveToNext();
+                name = cursor.getString(1);
+                cursor.close();
+            }
+
+
+        }
+
+
+        // Adding contact to list
+
+
+        return name;
+
+    }
 }
